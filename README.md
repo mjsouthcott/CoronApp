@@ -10,7 +10,7 @@ I WANT a list of geographically-relevant news stories and Tweets related to COVI
 SO THAT I can keep informed and stay safe during this global health crisis
 
 # Wireframe or sketch of the design:
-![Wireframe](http://framebox.org/AKJTL)
+![Wireframe](https://github.com/mjsouthcott/CoronApp/blob/master/images/wireframe.JPG)
 
 # APIs to be used:
 1. News API (https://newsapi.org)
