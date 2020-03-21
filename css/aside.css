@@ -1,0 +1,15 @@
+#city-input[data-state="valid"] {
+    border-color: hsl(120, 76%, 50%);
+}
+
+#city-input[data-state="invalid"] {
+    border-color: hsl(0, 76%, 50%);
+}
+
+#country-input[data-state="valid"] {
+    border-color: hsl(120, 76%, 50%);
+}
+
+#country-input[data-state="invalid"] {
+    border-color: hsl(0, 76%, 50%);
+}
