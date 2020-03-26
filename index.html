@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  <title>Document</title>
+  <title>CoronApp</title>
 </head>
+
 <body>
 
-  
+
 
 
 
 
   <div class="w3-container">
-    <div class="w3-container w3-teal">
+    <div class="w3-container w3-teal w3-card-4">
       <div class="w3-col m3">
-        <img class="covidPic w3-margin w3-animate-left" src="images/coronavirus.png">
+        <img class="covidPic w3-margin w3-animate-left" src="images/virus.png">
       </div>
-      
-      <div class="w3-col m9">
+
+      <div class="w3-col m6">
         <h1 class="coronAP">CoronAp</h1>
       </div>
+     
     </div>
 
 
@@ -32,48 +35,110 @@
     <div class="w3-cell-row">
 
 
-      <div class="w3-cell">
+      <div class="w3-cell column">
 
 
-        <div class="row">
-          <h2>Select City</h2>
-        </div>
-        <div class="row">
-          <input id="city-input">
-        </div>
-        <div class="row">
-          <h2>Country Input</h2>
-        </div>
-        <div class="row">
-          <input id="country-input">
-        </div>
+        <form>
+          <div class="row">
+            <h2>Select City</h2>
+          </div>
+          <div class="row">
+            <input id="city-input">
+          </div>
+          <div class="row">
+            <h2>Country Input</h2>
+          </div>
+          <div class="row">
+            <input id="country-input">
+          </div>
+        </form>
+
+
+
         <br>
         <div class="row">
-          <Button id="search-btn">Search</Button>
+          <Button class="w3-button w3-teal" id="search-btn">Search</Button>
         </div>
         <div class="row">
           <h2>Past Locations</h2>
         </div>
         <div class="row">
           <ul id="past-locations-list" class="w3-ul">
-            <li>Spongebob</li>
-            <li>Patrick</li>
-            <li>Squidward</li>
+            <li><button class="w3-button w3-teal">Spongebob</button></li>
+            <li><button class="w3-button w3-teal">Patrick</button></li>
+            <li><button class="w3-button w3-teal">Squidward</button></li>
           </ul>
         </div>
       </div>
 
-      <div class="w3-cell">
-        <div class="w3-row">
-        <div class="w3-col m8 border ">
-          <h1 class="w3-margin" id="current-location">Current Location: Toronto</h1>
-        </div>
+      <div class="w3-cell ">
+        <div class="w3-row ">
+          <div class="w3-col m8 currentLocation w3-teal w3-card-4 ">
+            <h1 class="w3-margin" id="current-location">Current Location: Toronto</h1>
+          </div>
           <div class="w3-col m4">
-              <img class="panicMeter w3-margin" src="images/face.jpg" >
-            </div>
-         </div>
+            <img class="panicMeter w3-margin" src="images/meter.gif">
+          </div>
+        </div>
 
-         <div class="w3-row border">
+
+
+        <div class="w3-card-4">
+
+          <header class="w3-container w3-teal">
+            <h1>Article Title</h1>
+          </header>
+
+
+          <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti ullam eum nisi odit dolores
+              repellat sunt at ipsa asperiores autem fuga delectus iste laboriosam architecto, perferendis culpa beatae
+              quas?</p>
+          </div>
+
+
+        </div>
+
+        <br>
+
+        <div class="w3-card-4">
+
+          <header class="w3-container w3-teal">
+            <h1>Article Title</h1>
+          </header>
+
+
+          <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti ullam eum nisi odit dolores
+              repellat sunt at ipsa asperiores autem fuga delectus iste laboriosam architecto, perferendis culpa beatae
+              quas?</p>
+          </div>
+
+
+        </div>
+
+        <br>
+
+        <div class="w3-card-4">
+
+          <header class="w3-container w3-teal">
+            <h1>Article Title</h1>
+          </header>
+
+
+          <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti ullam eum nisi odit dolores
+              repellat sunt at ipsa asperiores autem fuga delectus iste laboriosam architecto, perferendis culpa beatae
+              quas?</p>
+          </div>
+
+
+        </div>
+
+        <br>
+
+
+        <!-- <div class="w3-row border">
            <p class= "w3-margin">This is a tweet Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae iure illum aliquid consequatur tempore quaerat ipsam placeat adipisci? Debitis veniam odit quibusdam hic eos et maiores inventore. Repellat, sequi! Amet.</p>
          </div>
           <br>
@@ -83,18 +148,25 @@
         <br>
         <div class="w3-row border">
           <p class= "w3-margin">This is a tweet Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet explicabo quo error accusamus expedita fugiat exercitationem reiciendis commodi architecto. Dignissimos eum quas voluptatem dolorum, debitis atque sit odio minima illum?</p>
-        </div>
+        </div> -->
 
 
-    </div>
       </div>
     </div>
-    
+
+    <div class="w3-container w3-teal w3-card-4">
+      
+
+      <img src="images/jonboy.jpg" alt="Avatar" class="w3-left w3-circle screamPic">
+  <p>CoronApp In all rights resereved</p>
+    </div>
   </div>
-  
-  
-  
-  
+
+  </div>
+
+
+
+
   <!-- <div class="w3-container floaty" id="sideBar">
     <div class="col">
       <div class="row">
@@ -138,7 +210,8 @@
     </div>
   </div> -->
 
- 
-  
+
+
 </body>
+
 </html>
