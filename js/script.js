@@ -116,7 +116,7 @@ function displayCompanyName(companyName) {
 }
 
 function displayStockPrice(stockPrice) {
-  $stockPrice.text(stockPrice);
+  $stockPrice.text(`$${stockPrice}`);
 }
 
 // TODO
