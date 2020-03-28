@@ -1,8 +1,9 @@
-let $companyInput = $("#current-company");
+let $companyInput = $("#company-input");
 let $searchBtn = $("#search-btn");
 let $searchHistory = $("#search-history");
 let $stockPrice = $("#stock-price");
 let $errorMessage = $("#error-message");
+let $companyName = $("#company-name");
 
 const IEXCLOUD_SYMBOL_API_URL =
   "https://api.iextrading.com/1.0/ref-data/symbols";
@@ -77,6 +78,7 @@ function getStockSymbol(companyName) {
 
         updateSearchHistory(companyName);
         displaySearchHistory();
+        displayCompanyName(companyName);
         getStockPrice(response[i].symbol);
         return;
       }
@@ -109,12 +111,13 @@ function getNewsStories(companyName) {
   });
 }
 
+function displayCompanyName(companyName) {
+  $companyName.text(companyName);
+}
+
 function displayStockPrice(stockPrice) {
   $stockPrice.text(stockPrice);
 }
-
-// TODO
-function displayReaction(stockPrice) {}
 
 // TODO
 function displayNewsStories(response) {
