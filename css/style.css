@@ -11,8 +11,7 @@ header h1 {
   margin-right: 10px;
 }
 
-.row {
-  display: flex;
+.w3-row {
   margin-bottom: 10px;
 }
 
