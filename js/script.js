@@ -158,7 +158,7 @@ function displayNewsStories(newsStories) {
   for (let i = 0; i < 5; i++) {
     listItems += `
       <div class="w3-card-4">
-        <div class="w3-container w3-teal">
+        <div class="w3-container w3-red">
           <h3>${newsStories[i].title}</h3>
           <p>by ${newsStories[i].author}</p>
         </div>
