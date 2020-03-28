@@ -1,4 +1,4 @@
-let $companyInput = $("#company-input");
+let $companyInput = $("#current-company");
 let $searchBtn = $("#search-btn");
 let $searchHistory = $("#search-history");
 let $stockPrice = $("#stock-price");
@@ -117,9 +117,14 @@ function displayStockPrice(stockPrice) {
 function displayReaction(stockPrice) {}
 
 // TODO
-function displayNewsStories(data) {}
+function displayNewsStories(response) {
+  let articleOneT = document.getElementById("#articleOneTitle");
+  let articleTwoT = document.getElementById("#articleTwoTitle");
+  let articleThreeT = document.getElementById("#articleThreeTitle");
+  let currentCompany = document.getElementById("#displayCurrent");
 
-displayNewsStories(data);
+  console.log(response);
+}
 
 $searchBtn.on("click", function(event) {
   event.preventDefault();
@@ -131,6 +136,7 @@ $searchBtn.on("click", function(event) {
     // TODO: Add get and display function calls
     getStockSymbol(companyName);
     getNewsStories(companyName);
+    displayNewsStories(companyName);
   }
 });
 
