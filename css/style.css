@@ -6,6 +6,11 @@ header h1 {
   color: red;
 }
 
+#news-feed img {
+  float: left;
+  margin-right: 10px;
+}
+
 .floaty {
   float: left;
 }

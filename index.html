@@ -1,115 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <title>CoronApp</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title>CoronApp</title>
-</head>
-
-<body>
-  <!-- Start of Wrapper -->
-  <div id="wrapper">
-    <!-- Start of Header -->
-    <header>
-      <div class="w3-container w3-teal w3-card-4">
-        <div class="w3-col m3">
-          <img class="covidPic w3-margin w3-animate-left" src="images/virus.png">
+  <body>
+    <!-- Start of Wrapper -->
+    <div id="wrapper">
+      <!-- Start of Header -->
+      <header>
+        <div class="w3-container w3-teal w3-card-4">
+          <div class="w3-col m3">
+            <img
+              class="covidPic w3-margin w3-animate-left"
+              src="images/virus.png"
+            />
+          </div>
+          <div class="w3-col m6">
+            <h1>CoronApp</h1>
+            <h4><i>Helping you invest during a time of global panic!</i></h4>
+          </div>
         </div>
-        <div class="w3-col m6">
-          <h1>CoronApp</h1>
+      </header>
+      <!-- End of Header -->
+      <div class="w3-cell-row">
+        <!-- Start of Aside -->
+        <aside>
+          <div class="w3-cell column">
+            <form>
+              <div class="row">
+                <h4>Search for a Company:</h4>
+              </div>
+              <div class="row">
+                <input id="company-input" />
+              </div>
+              <div class="row">
+                <p id="error-message"></p>
+              </div>
+            </form>
+            <br />
+            <div class="row">
+              <button class="w3-button w3-teal" id="search-btn">Search</button>
+            </div>
+            <div class="row">
+              <h4>Search History</h4>
+            </div>
+            <div class="row">
+              <ul id="search-history" class="w3-ul"></ul>
+            </div>
+          </div>
+        </aside>
+        <!-- End of Aside -->
+        <!-- Start of Content -->
+        <div class="w3-cell" id="content">
+          <div class="w3-row ">
+            <div class="w3-col m8 currentLocation w3-teal w3-card-4 ">
+              <h3 class="w3-margin">
+                <span id="company-name"></span> Stock Price:
+                <span id="stock-price"></span>
+              </h3>
+              <h2 class="w3-margin" id="displayCurrent"></h2>
+            </div>
+            <div class="w3-col m4">
+              <img class="panicMeter w3-margin" src="images/meter.gif" />
+            </div>
+          </div>
+          <div id="news-feed"></div>
         </div>
       </div>
-    </header>
-    <!-- End of Header -->
-    <div class="w3-cell-row">
-      <!-- Start of Aside -->
-      <aside>
-        <div class="w3-cell column">
-          <form>
-            <div class="row">
-              <h4>Search for a Company:</h4>
-            </div>
-            <div class="row">
-              <input id="company-input">
-            </div>
-            <div class="row">
-              <p id="error-message"></p>
-            </div>
-          </form>
-          <br>
-          <div class="row">
-            <Button class="w3-button w3-teal" id="search-btn">Search</Button>
-          </div>
-          <div class="row">
-            <h4>Search History</h4>
-          </div>
-          <div class="row">
-            <ul id="search-history" class="w3-ul"></ul>
-          </div>
+      <!-- End of Content -->
+      <!-- Start of Footer -->
+      <footer>
+        <div class="w3-container w3-teal w3-card-4">
+          <img
+            src="images/jonboy.jpg"
+            alt="Avatar"
+            class="w3-left w3-circle screamPic"
+          />
+          <p>&copy; All rights reserved</p>
+          <p>CoronApp 2020</p>
         </div>
-      </aside>
-      <!-- End of Aside -->
-      <!-- Start of Content -->
-      <div class="w3-cell" id="content">
-        <div class="w3-row ">
-          <div class="w3-col m8 currentLocation w3-teal w3-card-4 ">
-            <h3 class="w3-margin"><span id="company-name"></span> Stock Price: <span id="stock-price"></span></h3>
-            <h2 class="w3-margin" id="displayCurrent"></h2>
-          </div>
-          <div class="w3-col m4">
-            <img class="panicMeter w3-margin" src="images/meter.gif">
-          </div>
-        </div>
-        <div class="w3-card-4">
-          <header class="w3-container w3-teal">
-            <h2 id="articleOneTitle">Article Title</h1>
-          </header>
-          <div class="w3-container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti ullam eum nisi odit dolores
-              repellat sunt at ipsa asperiores autem fuga delectus iste laboriosam architecto, perferendis culpa beatae
-              quas?</p>
-          </div>
-        </div>
-        <br>
-        <div class="w3-card-4">
-          <header class="w3-container w3-teal">
-            <h2 id="articleTwo">Article Title</h1>
-          </header>
-          <div class="w3-container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti ullam eum nisi odit dolores
-              repellat sunt at ipsa asperiores autem fuga delectus iste laboriosam architecto, perferendis culpa beatae
-              quas?</p>
-          </div>
-        </div>
-        <br>
-        <div class="w3-card-4">
-          <header class="w3-container w3-teal">
-            <h2 id="articleThree">Article Title</h1>
-          </header>
-          <div class="w3-container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti ullam eum nisi odit dolores
-              repellat sunt at ipsa asperiores autem fuga delectus iste laboriosam architecto, perferendis culpa beatae
-              quas?</p>
-          </div>
-        </div>
-      </div>
+      </footer>
+      <!-- End of Footer -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="js/script.js"></script>
     </div>
-    <!-- End of Content -->
-    <!-- Start of Footer -->
-    <footer>
-      <div class="w3-container w3-teal w3-card-4">
-        <img src="images/jonboy.jpg" alt="Avatar" class="w3-left w3-circle screamPic">
-        <p>CoronApp In all rights resereved</p>
-      </div>
-    </footer>
-    <!-- End of Footer -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/script.js"></script>
-  </div>
-  <!-- End of Wrapper -->
-</body>
-
+    <!-- End of Wrapper -->
+  </body>
 </html>
