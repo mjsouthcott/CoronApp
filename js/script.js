@@ -7,10 +7,10 @@ let $errorMessage = $("#error-message");
 const IEXCLOUD_SYMBOL_API_URL =
   "https://api.iextrading.com/1.0/ref-data/symbols";
 const IEXCLOUD_PRICE_API_URL = "https://sandbox.iexapis.com/stable/stock/";
-const NEWS_API_URL = "";
+const NEWS_API_URL = "https://newsapi.org/v2/everything?q=coronavirus&";
 
 const IEXCLOUD_API_KEY = "Tsk_2d13159a4439423cb7fb707f85ac77c5";
-const NEWS_API_KEY = "";
+const NEWS_API_KEY = "9a19e4ff6d4846d1b060f06b716e05a8";
 
 let keywords = ["coronavirus", "covid", "pandemic"];
 
@@ -101,7 +101,23 @@ function getStockPrice(stockSymbol) {
 }
 
 // TODO
-function getNewsStories(companyName) {}
+function getNewsStories(company) {
+  fetch(
+    "https://newsapi.org/v2/everything?q=coronavirus&" +
+      "?q=" +
+      company +
+      "&apiKey=" +
+      NEWS_API_KEY
+  )
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      let company = document.getElementById("company-input");
+      let curCompany = document.getElementById("#current-company");
+      curCompany.textContent = company.val.trim();
+    });
+}
 
 function displayStockPrice(stockPrice) {
   $stockPrice.text(stockPrice);
@@ -111,7 +127,9 @@ function displayStockPrice(stockPrice) {
 function displayReaction(stockPrice) {}
 
 // TODO
-function displayNewsStory() {}
+function displayNewsStories(data) {}
+
+displayNewsStories(data);
 
 $searchBtn.on("click", function(event) {
   event.preventDefault();

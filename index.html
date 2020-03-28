@@ -45,16 +45,10 @@
 
         <form>
           <div class="row">
-            <h2>Select City</h2>
+            <h2>Search Company</h2>
           </div>
           <div class="row">
-            <input id="city-input">
-          </div>
-          <div class="row">
-            <h2>Country Input</h2>
-          </div>
-          <div class="row">
-            <input id="country-input">
+            <input id="company-input">
           </div>
         </form>
 
@@ -65,13 +59,11 @@
           <Button class="w3-button w3-teal" id="search-btn">Search</Button>
         </div>
         <div class="row">
-          <h2>Past Locations</h2>
+          <h2>Recent Searches</h2>
         </div>
         <div class="row">
           <ul id="past-locations-list" class="w3-ul">
-            <li><button class="w3-button w3-teal">Spongebob</button></li>
-            <li><button class="w3-button w3-teal">Patrick</button></li>
-            <li><button class="w3-button w3-teal">Squidward</button></li>
+        
           </ul>
         </div>
       </div>
@@ -79,7 +71,8 @@
       <div class="w3-cell ">
         <div class="w3-row ">
           <div class="w3-col m8 currentLocation w3-teal w3-card-4 ">
-            <h1 class="w3-margin" id="current-location">Current Location: Toronto</h1>
+            <h2 class="w3-margin" id="current-location">Current Company: </h2>
+            <h2 class="w3-margin" id="current-company"></h2>
           </div>
           <div class="w3-col m4">
             <img class="panicMeter w3-margin" src="images/meter.gif">
