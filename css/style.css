@@ -16,6 +16,18 @@ header h1 {
   margin-bottom: 10px;
 }
 
+#company-name {
+  font-weight: bold;
+}
+
+#news-feed {
+  margin-right: 10px;
+}
+
+footer p {
+  margin-top: 50px;
+}
+
 #search-history .floaty {
   float: left;
 }

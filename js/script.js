@@ -76,8 +76,7 @@ function resetSearchHistory() {
 
 // Show error message below form input if company stock symbol not found
 function displayErrorMessage() {
-  let errorMessage = "<p>Stock symbol not found</p>";
-  $errorMessage.append($.parseHTML(errorMessage));
+  $errorMessage.append($.parseHTML("<p>Stock symbol not found</p>"));
 }
 
 // Hide error message
@@ -131,7 +130,7 @@ function displayStockPrice(stockPrice) {
 
 // Show company name beside stock price
 function displayCompanyName(companyName) {
-  $companyName.text(companyName);
+  $companyName.text(`${companyName}'s`);
 }
 
 // Get news stories from API
