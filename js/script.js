@@ -1,6 +1,7 @@
 // Define jQuery selectors
 let $companyInput = $("#company-input");
 let $searchBtn = $("#search-btn");
+let $resetBtn = $("#reset-btn");
 let $searchHistory = $("#search-history");
 let $stockPrice = $("#stock-price");
 let $errorMessage = $("#error-message");
@@ -64,6 +65,13 @@ function displaySearchHistory() {
       </li>`;
   }
   $searchHistory.append($.parseHTML(listItems));
+}
+
+// Remove all items from search history
+function resetSearchHistory() {
+  $searchHistory.empty();
+  searchHistory = "";
+  window.localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
 }
 
 // Show error message below form input if company stock symbol not found
@@ -181,4 +189,8 @@ $searchHistory.on("click", "a", function() {
       .text()
       .trim()
   );
+});
+
+$resetBtn.on("click", function() {
+  resetSearchHistory();
 });
