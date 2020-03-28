@@ -1,6 +1,7 @@
 // Define jQuery selectors
 let $companyInput = $("#company-input");
 let $searchBtn = $("#search-btn");
+let $resetBtn = $("#reset-btn");
 let $searchHistory = $("#search-history");
 let $stockPrice = $("#stock-price");
 let $errorMessage = $("#error-message");
@@ -67,14 +68,21 @@ function displaySearchHistory() {
   $searchHistory.append($.parseHTML(listItems));
 }
 
+// Remove all items from search history
+function resetSearchHistory() {
+  $searchHistory.empty();
+  searchHistory = "";
+  window.localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+}
+
 // Show error message below form input if company stock symbol not found
 function displayErrorMessage() {
-  $errorMessage.text("Stock symbol not found");
+  $errorMessage.append($.parseHTML("<p>Stock symbol not found</p>"));
 }
 
 // Hide error message
 function hideErrorMessage() {
-  $errorMessage.text("");
+  $errorMessage.empty();
 }
 
 // Get stock symbol from API and show content if found
@@ -123,7 +131,7 @@ function displayStockPrice(stockPrice) {
 
 // Show company name beside stock price
 function displayCompanyName(companyName) {
-  $companyName.text(companyName);
+  $companyName.text(`${companyName}'s`);
 }
 
 // Get news stories from API
@@ -150,7 +158,7 @@ function displayNewsStories(newsStories) {
   for (let i = 0; i < 5; i++) {
     listItems += `
       <div class="w3-card-4">
-        <div class="w3-container w3-teal">
+        <div class="w3-container w3-red">
           <h3>${newsStories[i].title}</h3>
           <p>by ${newsStories[i].author}</p>
         </div>
@@ -182,4 +190,8 @@ $searchHistory.on("click", "a", function() {
       .text()
       .trim()
   );
+});
+
+$resetBtn.on("click", function() {
+  resetSearchHistory();
 });
