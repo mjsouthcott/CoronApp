@@ -6,6 +6,7 @@ let $stockPrice = $("#stock-price");
 let $errorMessage = $("#error-message");
 let $companyName = $("#company-name");
 let $newsFeed = $("#news-feed");
+let $clearBtn = $("#clear-btn");
 
 // Define constants representing API info
 const IEXCLOUD_SYMBOL_API_URL =
@@ -181,4 +182,9 @@ $searchHistory.on("click", "a", function() {
       .text()
       .trim()
   );
+});
+
+$clearBtn.on("click", function() {
+  window.localStorage.removeItem("searchHistory");
+  window.location.reload();
 });
