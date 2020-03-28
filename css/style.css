@@ -11,7 +11,12 @@ header h1 {
   margin-right: 10px;
 }
 
-.floaty {
+.row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#search-history .floaty {
   float: left;
 }
 
@@ -24,10 +29,6 @@ header h1 {
 
 .currentLocation {
   margin-top: 20px;
-}
-
-.row {
-  display: flex;
 }
 
 .border {
