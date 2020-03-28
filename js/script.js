@@ -183,8 +183,3 @@ $searchHistory.on("click", "a", function() {
       .trim()
   );
 });
-
-$clearBtn.on("click", function() {
-  window.localStorage.removeItem("searchHistory");
-  window.location.reload();
-});
