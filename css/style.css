@@ -11,7 +11,23 @@ header h1 {
   margin-right: 10px;
 }
 
-.floaty {
+.w3-row {
+  margin-bottom: 10px;
+}
+
+#company-name {
+  font-weight: bold;
+}
+
+#news-feed {
+  margin-right: 10px;
+}
+
+footer p {
+  margin-top: 50px;
+}
+
+#search-history .floaty {
   float: left;
 }
 
@@ -24,10 +40,6 @@ header h1 {
 
 .currentLocation {
   margin-top: 20px;
-}
-
-.row {
-  display: flex;
 }
 
 .border {
