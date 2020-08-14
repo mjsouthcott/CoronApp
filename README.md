@@ -6,6 +6,10 @@ CoronApp
 
 This application will provide users with a curated feed of COVID-19-related news and social media content.
 
+# Deployed Link
+
+https://mjsouthcott.github.io/CoronApp/
+
 # User story:
 
 AS A concerned citizen and avid traveller
